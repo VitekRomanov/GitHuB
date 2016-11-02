@@ -9,7 +9,8 @@ public class TestRegistration {
 
 WebDriver driver;
 
-	
+// step 1	
+
 	@FindBy(id = "user_login")
 	private  WebElement user_login;
 	
@@ -21,6 +22,16 @@ WebDriver driver;
 	
 	@FindBy(id = "signup_button")
 	private  WebElement signup_button;
+
+// step 2
+	
+	@FindBy(xpath = "(//button[@type='submit'])[2]")
+	private  WebElement contin;
+	
+//step 3
+	 
+	@FindBy(name = "commit")
+	private WebElement singup;
 	
 	TestRegistration(WebDriver driver){
 		PageFactory.initElements(driver, this);
@@ -32,6 +43,8 @@ WebDriver driver;
 		user_email.sendKeys(usermail);
 		user_password.sendKeys(userpass);
 		signup_button.click();
+		contin.click();
+		singup.click();
 	}
 
 	

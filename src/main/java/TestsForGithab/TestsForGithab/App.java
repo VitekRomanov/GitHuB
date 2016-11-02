@@ -12,6 +12,6 @@ public class App {
         driver.get("https://github.com//join?source=header-home");
         
         TestRegistration registr = new TestRegistration(driver);
-        registr.RegistrAs("testuser2710", "testuser2710@yandex.ru","2710user");
+        registr.RegistrAs("testuser27103", "jbhuuhardodb@dropmail.me","2710user");
     }
 }     
