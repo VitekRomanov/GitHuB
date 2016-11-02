@@ -9,6 +9,9 @@ public class TestRegistration {
 
 WebDriver driver;
 
+    @FindBy(linkText = "Sign up")
+    private  WebElement Sign_up;
+
 // step 1	
 
 	@FindBy(id = "user_login")
@@ -28,8 +31,19 @@ WebDriver driver;
 	@FindBy(xpath = "(//button[@type='submit'])[2]")
 	private  WebElement contin;
 	
-//step 3
-	 
+//step 3  Tailor your experience 
+
+			
+	@FindBy(id="answers_98_choice_461")
+	private WebElement chose1;
+	
+	@FindBy(id="answers_99_choice_469")
+	private WebElement chose2;
+	
+	@FindBy(id="answers_100_choice_473")
+	private WebElement chose3;
+	
+
 	@FindBy(name = "commit")
 	private WebElement singup;
 	
@@ -39,11 +53,19 @@ WebDriver driver;
 	}
 	
 	public void RegistrAs (String username,String usermail, String userpass ){
+		
+		Sign_up.click();
+		
 		user_login.sendKeys(username);
 		user_email.sendKeys(usermail);
 		user_password.sendKeys(userpass);
 		signup_button.click();
+		
 		contin.click();
+		
+		chose1.click();
+		chose2.click();
+		chose3.click();
 		singup.click();
 	}
 

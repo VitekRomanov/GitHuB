@@ -9,9 +9,13 @@ public class App {
 		System.setProperty("webdriver.chrome.driver", "D:\\Workspace\\drivers\\chromedriver.exe"); //путь к твоему chromedriver.exe
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://github.com//join?source=header-home");
+        driver.get("https://github.com");
         
-        TestRegistration registr = new TestRegistration(driver);
-        registr.RegistrAs("testuser27103", "jbhuuhardodb@dropmail.me","2710user");
+//        TestRegistration registr = new TestRegistration(driver);
+//        registr.RegistrAs("testuser27103", "jbhuuhardodb@dropmail.me","2710user");
+
+        LoginToSite login = new LoginToSite(driver);
+        login.loginAs("testuser27103", "2710user");
+        
     }
 }     
