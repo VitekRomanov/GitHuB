@@ -10,13 +10,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TestLoginPage {
-	public WebDriver driver;
+	public static WebDriver driver;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		System.setProperty("webdriver.chrome.driver", "D:\\Workspace\\drivers\\chromedriver.exe"); //путь к твоему chromedriver.exe
         WebDriver driver = new ChromeDriver();
-        
+              
         driver.get("https://github.com");
         
         LoginPage login = new LoginPage(driver);
@@ -26,9 +26,8 @@ public class TestLoginPage {
 	}
 	
 	@Before
-	
-	public  void setUpBefore() throws Exception {
-		WebDriver driver = new ChromeDriver();
+	public void setUpBefore() throws Exception {
+		//WebDriver driver = new ChromeDriver();
 		driver.get("https://github.com");
 		System.out.println("Старт второй");
 	}
