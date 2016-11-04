@@ -5,15 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginToSite {
+public class LoginPage {
 	
 	WebDriver driver;
 	
 	@FindBy (linkText ="Sign in")
-	private WebElement sign_in;
+	private WebElement signIn;
 	
 	@FindBy (id ="login_field")
-	private WebElement user_login;
+	private WebElement userLogin;
 	
 	@FindBy (id ="password")
 	private WebElement password;
@@ -21,15 +21,15 @@ public class LoginToSite {
 	@FindBy (name="commit")
 	private WebElement commit;
 	
-	LoginToSite(WebDriver driver){
+	LoginPage(WebDriver driver){
 		PageFactory.initElements(driver, this);
 		this.driver =driver;
 	}
 	
 	public void loginAs(String usserlog, String userpass){
 		
-		sign_in.click();
-		user_login.sendKeys(usserlog);
+		signIn.click();
+		userLogin.sendKeys(usserlog);
 		password.sendKeys(userpass);
 		commit.click();
 	}

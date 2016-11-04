@@ -14,7 +14,7 @@ public class App {
 //        TestRegistration registr = new TestRegistration(driver);
 //        registr.RegistrAs("testuser27103", "jbhuuhardodb@dropmail.me","2710user");
 
-        LoginToSite login = new LoginToSite(driver);
+        LoginPage login = new LoginPage(driver);
         login.loginAs("testuser27103", "2710user");
         
     }

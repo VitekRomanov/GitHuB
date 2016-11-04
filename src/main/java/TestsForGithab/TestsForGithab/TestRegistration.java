@@ -52,7 +52,7 @@ WebDriver driver;
 		this.driver =driver;
 	}
 	
-	public void RegistrAs (String username,String usermail, String userpass ){
+	public void registrAs (String username,String usermail, String userpass ){
 		
 		Sign_up.click();
 		
