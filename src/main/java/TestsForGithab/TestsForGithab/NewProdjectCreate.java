@@ -6,10 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class NewProdjectCreate {
-	
+
 	WebDriver driver;
 	
-	@FindBy (linkText ="Start a project")
+	@FindBy (xpath ="(//a[contains(text(),'New repository')])[2]")
 	protected WebElement startproj;                
 	  
 	//page 2
@@ -23,18 +23,23 @@ public class NewProdjectCreate {
 	@FindBy (xpath ="(//button[@type='submit'])[2]")
 	protected WebElement createrep;
 	
+	@FindBy (linkText ="SomeName")
+	protected WebElement text;
+	
+	
 	NewProdjectCreate(WebDriver driver){
 		PageFactory.initElements(driver, this);
 		this.driver =driver;
 	}
 	
 	
-	public void repositoriCreate(){
+	public String repositoriCreate(){
 		startproj.click();
 		repositoryName.clear();
 		repositoryName.sendKeys("SomeName");
 		autoInit.click();
 		createrep.click();
+		return text.toString();
 	}
 
 }

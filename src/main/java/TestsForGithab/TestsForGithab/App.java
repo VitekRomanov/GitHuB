@@ -2,12 +2,13 @@ package TestsForGithab.TestsForGithab;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class App {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "D:\\Workspace\\drivers\\chromedriver.exe"); //путь к твоему chromedriver.exe
-       WebDriver driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "D:\\Workspace\\drivers\\chromedriver.exe"); //путь к твоему chromedriver.exe
+       WebDriver driver = new FirefoxDriver();
 
         driver.get("https://github.com");
 //        
